@@ -22,8 +22,9 @@ and compares the two independent reads.
 What it compares are facts, not text: the (path, status) pairs that are staged
 or unstaged; the names that are untracked or in conflict; the commit hash,
 parents and subject of every entry in the history, and the counts. Rename
-sources are parsed by the backend but not compared in this slice: nothing
-seeded renames yet, and a rename slice has to carry the old paths on both
+sources are parsed by the backend but not compared in this slice: no
+seeded state produces a rename status record yet, and a rename status slice
+has to carry the old paths on both
 sides first. Porcelain output gets reflowed
 between git releases and that must not paint the lab red; a parse that drifts
 from git must. It runs the real binary on purpose, so there is nothing mocked

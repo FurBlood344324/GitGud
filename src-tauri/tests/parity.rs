@@ -261,8 +261,8 @@ impl Facts {
                 }
                 // 2 XY sub mH mI mW hH hI Xscore path, then the old path as
                 // its own record. The rename source is not compared yet: no
-                // seeded state renames, and a rename slice must add it to
-                // Facts on both sides.
+                // seeded state produces a rename status record, and a rename
+                // status slice must add it to Facts on both sides.
                 b'2' => {
                     let f: Vec<&str> = entry.splitn(10, ' ').collect();
                     entries.next();
